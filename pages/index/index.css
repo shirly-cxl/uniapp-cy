@@ -1,0 +1,128 @@
+
+.carousel{
+	width: 100%;
+	height: 440upx;
+}
+
+.hot-title{
+	padding: 16upx 20upx;
+	margin-top: 15upx;
+	font-size: 20px;
+	font-weight: bold;
+	background-color: #FFFFFF;
+}
+
+.hot{
+	width: 100%;
+	white-space: nowrap;
+	background-color: #FFFFFF;
+}
+
+.single{
+	display: inline-block;
+	margin: 0 16upx;
+}
+
+.wapper{
+	display: flex;
+	flex-direction: column;
+}
+
+.poster{
+	width: 200upx;
+	height: 270upx;
+}
+
+.name{
+	width: 200upx;
+	margin-top: 10upx;
+	font-size: 16px;
+	font-weight: bold;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.score{
+	font-size: 12px;
+	color: grey;
+	padding-bottom: 15upx;
+}
+
+.video{
+	background-color: #fff;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 0 20upx;
+}
+
+.movice{
+	width: 350upx;
+	height: 220upx;
+	margin-top: 10upx;
+}
+
+.like{
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+}
+
+.like-movice{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 30upx 20upx;
+}
+
+
+.like-img{
+	width: 180upx;
+	height: 240upx;
+	border-radius: 3%;
+}
+
+.desc{
+	width: 340upx;
+	display: flex;
+	flex-direction: column;
+}
+
+.title{
+	font-size: 18px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.info{
+	color: #808080;
+	font-size: 15px;
+}
+
+.oper{
+	width: 140upx;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border-left: dashed 2px #dbdbdb;
+}
+
+.ico{
+	width: 100upx;
+	height: 100upx;
+	align-self: center;
+}
+
+.thumb{
+	color: #feab2a;
+	font-size: 18px;
+	align-self: center;
+}
+
+.animations{
+	opacity: 0;
+	font-weight: bold;
+}
