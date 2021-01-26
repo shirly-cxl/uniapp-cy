@@ -130,7 +130,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
 //
 //
 //
@@ -158,7 +158,66 @@ var _default =
     var tempFilePaths = params.tempFilePaths;
     this.temFace = tempFilePaths;
   },
-  methods: {} };exports.default = _default;
+  methods: {
+    changeFace: function changeFace() {
+      uni.chooseImage({
+        count: 1, //默认9
+        sizeType: ['compressed'], //压缩图
+        sourceType: ['album'], //从相册选择
+        success: function success(res) {
+          var tempFilePaths = res.tempFilePaths[0];
+          this.temFace = tempFilePaths;
+          console.log(JSON.stringify(res.tempFilePaths));
+        } });
+
+    },
+
+    upload: function upload() {
+      var me = this;
+      var globalUser = me.getGlobalUser("globalUser");
+      globalUser.avatarUrl = me.temFace;
+      var userInfo = globalUser;
+      uni.setStorageSync("globalUser", userInfo);
+      uni.navigateBack({
+        delta: 1 });
+
+      /**
+                     var globalUser = me.getGlobalUser("globalUser"); 
+                     uni.showLoading({
+                     	title:"上传中，请稍后",
+                     	mask: true
+                     });
+                     
+                     uni.uploadFile({
+                     	url: 'https://www.example.com/upload', //仅为示例，非真实的接口地址
+                     	filePath: me.temFace,
+                     	header:{
+                     		"token":''
+                     	},
+                     	name: 'file',
+                     	success(uploadFileRes){
+                     		var resData = JSON.parse(uploadFileRes.data);
+                     		if(resData.status == 200){
+                     			var userInfo = resData.data;
+                     			uni.setStorageSync("globalUser",userInfo);
+                     			uni.navigateBack({
+                     				delta:1
+                     			});
+                     		}else if(resData.status == 502 || resData.status == 500){
+                     			uni.showToast({
+                     				title:uploadFileRes.data.msg,
+                     				duration:2000,
+                     			});
+                     		}
+                     		console.log(uploadFileRes.data);
+                     	},
+                     	complete() {
+                     		uni.hideLoading();
+                     	}
+                     });
+                     **/
+    } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 

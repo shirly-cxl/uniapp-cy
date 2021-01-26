@@ -14,7 +14,7 @@
 			<view class="line-top">
 				<view class="line"></view>
 			</view>
-			<view class="item-wapper face-line-upbottom">
+			<view class="item-wapper face-line-upbottom" @click="modifnickName">
 				<view class="info-words">昵称</view>
 				<view class="right-wapper">
 					<view>{{userInfo.nickName}}</view>
@@ -27,10 +27,10 @@
 			<view class="line-top">
 				<view class="line"></view>
 			</view>
-			<view class="item-wapper face-line-upbottom">
+			<view class="item-wapper face-line-upbottom" @click="birthday">
 				<view class="info-words">生日</view>
 				<view class="right-wapper">
-					<view>1999.03.06</view>
+					<view>{{userInfo.birthday}}</view>
 					<view class="arrow">
 						<image class="arrow-ico" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3658949809,876707280&fm=26&gp=0.jpg"></image>
 					</view>
@@ -118,14 +118,33 @@
 							    sourceType: ['album'], //从相册选择
 							    success(res) {
 									var tempFilePaths=res.tempFilePaths[0];
+									// #ifdef H5
 									uni.navigateTo({
 										url:'../myFace/myFace?tempFilePaths='+tempFilePaths
-									})
+									});
+									// #endif
+									// #ifndef H5
+									uni.navigateTo({
+										url:'../faceCrop/faceCrop?tempFilePaths='+tempFilePaths
+									});
+									// #endif
 							        console.log(JSON.stringify(res.tempFilePaths));
 							    }
 							});
 						}
 					}
+				})
+			},
+		
+			modifnickName(){
+				uni.navigateTo({
+					url:'../nickName/nickName'
+				})
+			},
+			
+			birthday(){
+				uni.navigateTo({
+					url:'../birthday/birthday'
 				})
 			}
 		},

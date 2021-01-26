@@ -3,76 +3,89 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"app-plus":{
-					"titleNView":false
+				"app-plus": {
+					"titleNView": false
 				},
-				"enablePullDownRefresh":true //开启下拉刷新功能
+				"enablePullDownRefresh": true //开启下拉刷新功能
 			}
-		}
-	    ,{
-            "path" : "pages/search/search",
-            "style" : {
-				"navigationBarTitleText":"搜索预告片"
+		}, {
+			"path": "pages/search/search",
+			"style": {
+				"navigationBarTitleText": "搜索预告片"
 			}
-        }
-        ,{
-            "path" : "pages/my/my",
-            "style": {
-            	"app-plus":{
-            		"titleNView":false
-            	},
+		}, {
+			"path": "pages/my/my",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				},
 				"navigationBarTextStyle": "white",
 				"navigationBarTitleText": "我的",
 				"navigationBarBackgroundColor": "#ffd655"
 			}
-        }
-        ,{
-            "path" : "pages/movice/movice",
-            "style": {
-            	"app-plus":{
-            		"titleNView":{
-						"type":"transparent",
-						"buttons":[
-							{
-								"type":"share"
-							}
-						]
+		}, {
+			"path": "pages/movice/movice",
+			"style": {
+				"app-plus": {
+					"titleNView": {
+						"type": "transparent",
+						"buttons": [{
+							"type": "share"
+						}]
 					}
-            	}
+				}
 			}
-        }
-        ,{
-            "path" : "pages/cover/cover",
-            "style" : {
-            	"navigationBarTitleText":"封面"
-            }
-        }
-        ,{
-            "path" : "pages/registLogin/registLogin",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "登录/注册",
-                "enablePullDownRefresh": false
-            }
-            
-        },
+		}, {
+			"path": "pages/cover/cover",
+			"style": {
+				"navigationBarTitleText": "封面"
+			}
+		}, {
+			"path": "pages/registLogin/registLogin",
+			"style": {
+				"navigationBarTitleText": "登录/注册",
+				"enablePullDownRefresh": false
+			}
+
+		},
 		{
 			"path": "pages/meInfo/meInfo",
 			"style": {
 				"navigationBarTitleText": "设置",
 				"enablePullDownRefresh": false
 			}
-		
+
+		}, {
+			"path": "pages/myFace/myFace",
+			"style": {
+				"navigationBarTitleText": "头像上传"
+			}
+
+		}, {
+			"path": "pages/faceCrop/faceCrop",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/nickName/nickName",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "修改昵称",
+				"navigationBarBackgroundColor": "#ffd655"
+			}
+
+		}, {
+			"path": "pages/birthday/birthday",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "修改生日",
+				"navigationBarBackgroundColor": "#ffd655"
+			}
+
 		}
-        ,{
-            "path" : "pages/myFace/myFace",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "头像上传"
-            }
-            
-        }
-    ],
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "电影",
@@ -80,25 +93,25 @@
 		"backgroundColor": "#F8F8F8"
 	},
 	"tabBar": {
-	    "color": "#bfbfbf",
-	    "selectedColor": "#515151",
-	    "borderStyle": "black",
-	    "backgroundColor": "#ffffff",
-	    "list": [{
-	        "pagePath": "pages/index/index",
-	        // "iconPath": "static/image/icon_component.png",
-	        // "selectedIconPath": "static/image/icon_component_HL.png",
-	        "text": "首页"
-	    }, {
-	        "pagePath": "pages/search/search",
-	        // "iconPath": "static/image/icon_API.png",
-	        // "selectedIconPath": "static/image/icon_API_HL.png",
-	        "text": "搜索"
-	    }, {
-	        "pagePath": "pages/my/my",
-	        // "iconPath": "static/image/icon_API.png",
-	        // "selectedIconPath": "static/image/icon_API_HL.png",
-	        "text": "我的"
-	    }]
+		"color": "#bfbfbf",
+		"selectedColor": "#515151",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/index/index",
+			// "iconPath": "static/image/icon_component.png",
+			// "selectedIconPath": "static/image/icon_component_HL.png",
+			"text": "首页"
+		}, {
+			"pagePath": "pages/search/search",
+			// "iconPath": "static/image/icon_API.png",
+			// "selectedIconPath": "static/image/icon_API_HL.png",
+			"text": "搜索"
+		}, {
+			"pagePath": "pages/my/my",
+			// "iconPath": "static/image/icon_API.png",
+			// "selectedIconPath": "static/image/icon_API_HL.png",
+			"text": "我的"
+		}]
 	}
 }

@@ -57,8 +57,9 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/myFace/myFace",
-          "pathName": "pages/myFace/myFace",
+          "name": "pages/meInfo/meInfo",
+          "pathName": "pages/meInfo/meInfo",
+          "query": "",
           "scene": null
         }
       ]

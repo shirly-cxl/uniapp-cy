@@ -250,14 +250,33 @@ var _default =
               sourceType: ['album'], //从相册选择
               success: function success(res) {
                 var tempFilePaths = res.tempFilePaths[0];
+
+
+
+
+
+
                 uni.navigateTo({
-                  url: '../myFace/myFace?tempFilePaths=' + tempFilePaths });
+                  url: '../faceCrop/faceCrop?tempFilePaths=' + tempFilePaths });
+
 
                 console.log(JSON.stringify(res.tempFilePaths));
               } });
 
           }
         } });
+
+    },
+
+    modifnickName: function modifnickName() {
+      uni.navigateTo({
+        url: '../nickName/nickName' });
+
+    },
+
+    birthday: function birthday() {
+      uni.navigateTo({
+        url: '../birthday/birthday' });
 
     } },
 
