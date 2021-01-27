@@ -10,7 +10,8 @@
     "pages/myFace/myFace",
     "pages/faceCrop/faceCrop",
     "pages/nickName/nickName",
-    "pages/birthday/birthday"
+    "pages/birthday/birthday",
+    "pages/sex/sex"
   ],
   "subPackages": [],
   "window": {

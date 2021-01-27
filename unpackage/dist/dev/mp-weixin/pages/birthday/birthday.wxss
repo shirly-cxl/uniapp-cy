@@ -5,6 +5,7 @@
 	position: absolute;
 }
 .block {
+	padding: 20rpx;
 	background-color: #fff;
 }
 .birth-input {
@@ -18,5 +19,9 @@
 	background-color: #fff;
 	padding-left: 20rpx;
 	padding-top: 30rpx;
+}
+.btn{
+	width:95%;
+	margin-top: 30rpx;
 }
 

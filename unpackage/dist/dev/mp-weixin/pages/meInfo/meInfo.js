@@ -278,6 +278,12 @@ var _default =
       uni.navigateTo({
         url: '../birthday/birthday' });
 
+    },
+
+    modifSex: function modifSex() {
+      uni.navigateTo({
+        url: '../sex/sex' });
+
     } },
 
   onShow: function onShow() {

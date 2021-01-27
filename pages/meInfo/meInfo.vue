@@ -40,12 +40,12 @@
 			<view class="line-top">
 				<view class="line"></view>
 			</view>
-			<view class="item-wapper face-line-upbottom">
+			<view class="item-wapper face-line-upbottom" @click="modifSex">
 				<view class="info-words">性别</view>
 				<view class="right-wapper">
 					<view>
-						<view v-if="sex == 1">男生</view>
-						<view v-else-if="sex == 0">女生</view>
+						<view v-if="userInfo.sex == 1">男</view>
+						<view v-else-if="userInfo.sex == 0">女</view>
 						<view v-else>未知</view>
 					</view>
 					<view class="arrow">
@@ -145,6 +145,12 @@
 			birthday(){
 				uni.navigateTo({
 					url:'../birthday/birthday'
+				})
+			},
+			
+			modifSex(){
+				uni.navigateTo({
+					url:'../sex/sex'
 				})
 			}
 		},

@@ -181,6 +181,7 @@ var _default =
       userInfo: {
         nickName: 'null',
         birthday: '2020-10-10',
+        sex: '1',
         avatarUrl: 'https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1475331839,2066156315&fm=26&gp=0.jpg' } };
 
 

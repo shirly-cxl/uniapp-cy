@@ -1,10 +1,15 @@
 <template>
 	<view class="page page-fill">
-		<form @submit="submitBirthday">
-			<view class="block" style="margin-top:20upx;">
-				<picker mode="date" @change="dateChange">
-					<view class="birthday">{{birthday}}</view>
-				</picker>
+		<form @submit="submitSex">
+			<view class="block" style="margin-top:20upx ;">
+				<radio-group class="radio-sex" @change="sexChange">
+					<label class="radio-single">
+						<radio value="1" :checked='sex==1'>男</radio>
+					</label>
+					<label class="radio-single">
+						<radio value="0"  :checked='sex==0'>女</radio>
+					</label>
+				</radio-group>
 			</view>
 			<button type="primary" form-type="submit" class="btn">提交</button>
 		</form>
@@ -16,23 +21,23 @@
 		data() {
 			return {
 				globalUser: {},
-				birthday:''
+				sex:'-1',
 			}
 		},
 		onLoad() {
 			var me = this;
 			var globalUser = me.getGlobalUser("globalUser");
 			me.globalUser = globalUser;
-			me.birthday = globalUser.birthday;
+			me.sex = globalUser.sex;
 		},
 		methods: {
-			submitBirthday(e) {
+			submitSex(e) {
 				var me = this;
-				var birthday = me.birthday;
+				var sex = me.sex;
 				var globalUser = me.globalUser;
-				me.globalUser.birthday = birthday;
+				me.globalUser.sex = sex;
 				var userInfo = globalUser;
-				console.log(birthday);
+				console.log(sex);
 				uni.setStorageSync("globalUser", userInfo);
 				uni.navigateBack({
 					delta:1
@@ -43,8 +48,8 @@
 				// })
 			},
 			
-			dateChange(e){
-				this.birthday = e.detail.value;
+			sexChange(e){
+				this.sex = e.detail.value;
 			}
 		}
 	}
@@ -58,26 +63,20 @@
 	}
 
 	.block {
-		padding: 20upx;
 		background-color: #fff;
-	}
-	
-	.birth-input {
-		height: 80upx;
-		line-height: 40upx;
-		background-color: #fff;
-		padding-left: 20upx;
 	}
 
-	.birth{
-		height: 80upx;
-		background-color: #fff;
-		padding-left: 20upx;
-		padding-top: 30upx;
+	.radio-sex{
+		display: flex;
+		flex-direction: column;
 	}
 	
-	.btn{
-		width:95%;
-		margin-top: 30upx;
+	.radio-single{
+		padding: 20upx 20upx;
+	}
+
+	.btn {
+		width: 95%;
+		margin-top: 40upx;
 	}
 </style>
